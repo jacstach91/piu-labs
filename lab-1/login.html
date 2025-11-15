@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8" />
+    <title>Logowanie</title>
+    <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+    <div class="auth-box">
+        <h2 class="auth-heading">Zaloguj się</h2>
+
+        <form action="https://httpbin.org/post" method="post" class="auth-form">
+            <label for="user-login">Nazwa użytkownika:</label>
+            <input type="text" id="user-login" name="username" required />
+
+            <label for="user-pass">Hasło:</label>
+            <input type="password" id="user-pass" name="password" required />
+
+            <div class="password-reset-link">
+                <a href="#">Zresetuj hasło</a>
+            </div>
+
+            <button type="submit">Zaloguj</button>
+        </form>
+    </div>
+</body>
+</html>

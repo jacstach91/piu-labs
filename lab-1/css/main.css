@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0b0b0b;
+    color: #f8e71c;
+    min-height: 100vh;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    line-height: 1.6;
+}
+
+.nav-panel {
+    background: #111;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 280px;
+    border: 2px solid #f8e71c;
+}
+
+.nav-title {
+    font-size: 26px;
+    font-weight: bold;
+    color: #f8e71c;
+    margin-bottom: 10px;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+    .nav-list a {
+        color: #f8e71c;
+        text-decoration: none;
+        font-size: 16px;
+    }
+
+        .nav-list a:hover {
+            text-decoration: underline;
+        }
+
+.auth-box {
+    background: #111;
+    width: 100%;
+    max-width: 420px;
+    padding: 30px;
+    border-radius: 12px;
+    border: 2px solid #f8e71c;
+}
+
+.auth-heading {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+    .auth-form label {
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    .auth-form input[type="text"],
+    .auth-form input[type="password"] {
+        padding: 10px;
+        background: #0b0b0b;
+        border: 1px solid #f8e71c;
+        border-radius: 6px;
+        color: #f8e71c;
+    }
+
+.password-reset-link {
+    text-align: right;
+    font-size: 14px;
+}
+
+    .password-reset-link a {
+        color: #f8e71c;
+    }
+
+button[type="submit"] {
+    background: #f8e71c;
+    color: #0b0b0b;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+    button[type="submit"]:hover {
+        background: #ffe83b;
+    }
+
+.notes-container {
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.notes-title {
+    font-size: 28px;
+    text-al
