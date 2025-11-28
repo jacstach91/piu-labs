@@ -1,18 +1,59 @@
+/* minimal css refactor */
 /* Minimalny reset  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* kluczowe */
+}
+
 html {
   font-size: 16px; /* bazowy rozmiar czcionki */
   font-family: system-ui, sans-serif; /* font systemowy */
   line-height: 1.5; /* lepsza czytelność */
+  height: 100%;
+  width: 100%;
 }
+
 body {
-  margin: 1rem;
-  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav {
+  width: 500px;
+  height: 250px;
+  background-color: yellow;
+  color: black;
+  padding: 20px 20px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+}
+
+nav h1 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+nav ul {
+  margin-left: 20px;
+  list-style:disc;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
 }
 
 a {
-  color: #0066cc; /* niebieski kolor linków */
+  color: black; /* niebieski kolor linków */
   text-decoration: none; /* bez podkreślenia */
   font-size: 1.4rem;
+  font-weight: 700;
 }
 a:hover {
   text-decoration: underline; /* podkreślenie przy najechaniu */
