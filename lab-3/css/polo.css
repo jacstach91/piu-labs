@@ -67,7 +67,21 @@ body {
     border-color 0.3s ease;
 }
 
+.card:has(input[name='size'][value='S']:checked) .image {
+  background-size: 90%; /* zmniejszone zdjęcie */
+}
 
+.card:has(input[name='size'][value='M']:checked) .image {
+  background-size: 98%; /* normalny rozmiar */
+}
+
+.card:has(input[name='size'][value='L']:checked) .image {
+  background-size: 106%; /* powiększone zdjęcie */
+}
+
+.card:has(input[name='size'][value='XL']:checked) .image {
+  background-size: 114%; /* największe zdjęcie */
+}
 
 .details {
   width: min(300px, 100%);
