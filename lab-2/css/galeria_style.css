@@ -1,0 +1,43 @@
+
+/* galeria_style.css - responsywna galeria zdjęć piłkarzy */
+:root{
+  --bg:black;
+  --card:yellow;
+  --accent:#0b7a2a;
+  --muted:black;
+  --gap:18px;
+  --radius:12px;
+  --shadow:0 8px 20px rgba(0,0,0,0.12);
+}
+
+*{box-sizing:border-box}
+body{font-family:Inter, Arial, Helvetica, sans-serif;margin:0;background:var(--bg);color:#111;padding:28px}
+h1{font-size:1.6rem;margin:0 0 10px;text-align:center}
+.description{max-width:900px;margin:0 auto 22px;color:var(--muted);text-align:center}
+
+.gallery{max-width:1200px;margin:0 auto;display:grid;gap:var(--gap);grid-template-columns:1fr}
+figure.card{background:var(--card);border-radius:var(--radius);overflow:hidden;border:1px solid #eee;padding:0;margin:0;display:flex;flex-direction:column;align-items:stretch}
+.card .thumb{display:block;overflow:hidden;border-radius:var(--radius);background:#ddd}
+.card img{display:block;width:100%;height:auto;object-fit:cover;transition:transform 220ms ease, box-shadow 220ms ease; border-radius:calc(var(--radius) - 6px)}
+.card figcaption{padding:12px 14px 18px 14px;font-weight:600;color:var(--muted);text-align:center}
+.card .download{display:inline-block;margin:0 auto 16px auto;padding:8px 12px;border-radius:8px;text-decoration:none;background:var(--accent);color:#fff;font-weight:600;box-shadow:0 4px 12px rgba(11,122,42,0.18)}
+
+/* hover effect */
+.card:hover img{transform:scale(1.03);box-shadow:var(--shadow)}
+
+/* rounded inner image corners */
+.card .thumb img{border-bottom-left-radius:0;border-bottom-right-radius:0;border-top-left-radius:0;border-top-right-radius:0}
+
+/* Layout rules according to spec */
+/* default: <1200 -> 1 column (covers <800 and 800-1199 and 1200 fallback) */
+@media (min-width:1200px){
+  /* two columns for >=1200 */
+  .gallery{grid-template-columns:1fr 1fr}
+}
+
+/* image size selection is handled by <picture> srcset/media queries in HTML */
+
+/* small screens slightly smaller image heights */
+@media (max-width:480px){
+  .card img{height:160px;object-fit:cover}
+}
