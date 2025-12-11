@@ -1,0 +1,2 @@
+export function uid(){return Date.now().toString(36)+Math.random().toString(36).slice(2,8);}
+export function randomColor(){const h=Math.floor(Math.random()*360);const s=70;const l=60;return `hsl(${h} ${s}% ${l}%)`;}
